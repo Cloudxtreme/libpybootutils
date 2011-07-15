@@ -1,0 +1,9 @@
+libpybootutils - Python modules providing simple access to most popular Unix bootloaders. Works only in read-only mode.
+
+Author: webnull < webnull at ubuntu dot pl > (JABBER)
+
+Changelog:
+15.07.2011:
+    + GRUB 2 read-only support
+    + Project is starting up
+

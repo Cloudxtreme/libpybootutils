@@ -1,5 +1,7 @@
 libpybootutils - Python modules providing simple access to most popular Unix bootloaders. Works only in read-only mode.
 
+Dependencies: Python 2.x, Unix-like operating system
+
 Author: webnull < webnull at ubuntu dot pl > (JABBER)
 
 Changelog:

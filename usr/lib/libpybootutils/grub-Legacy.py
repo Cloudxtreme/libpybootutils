@@ -103,6 +103,6 @@ class BootLoaderParser():
 
 
 # TEST         
-List = BootLoaderParser()
-List.loadFile("../../../grub-legacy-test.lst")
-print List.results
+#List = BootLoaderParser()
+#List.loadFile("../../../grub-legacy-test.lst")
+#print List.results

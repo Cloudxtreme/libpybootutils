@@ -12,7 +12,7 @@
 		<platform>BeOS</platform>
 	</platforms>
 
-	<version>1.2</version>
+	<version>1.2.1</version>
 	<mirrors>
 		<mirror>git://github.com/webnull/libpybootutils.git</mirror>
 	</mirrors>

@@ -3,6 +3,9 @@ libpybootutils - Python modules providing simple access to most popular Unix boo
 Author: webnull < webnull at ubuntu dot pl > (JABBER)
 
 Changelog:
+25.07.2011 (v.1.2.1):
+    + Added examples of configurations
+
 25.07.2011 (v.1.2):
     * Fixed GRUB 0.97 module name
     + Added setup.py, project will be always available as python module

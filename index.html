@@ -1,1 +1,133 @@
-My GitHub Page
+
+<!DOCTYPE html> 
+<html> 
+<head> 
+  <meta charset='utf-8'> 
+ 
+  <title>libpybootutils</title> 
+ 
+  <style type="text/css"> 
+    body {
+      margin-top: 1.0em;
+      background:#020203 url(background.png) no-repeat center top;
+      font-family: Helvetica, Arial, FreeSans, san-serif;
+      color: black;
+    }
+ 
+    .text {
+        margin: 20px;  
+    }
+ 
+    h1 { font-size: 3.8em; color: #e36a79; margin-bottom: 3px; }
+    h1 .small { font-size: 0.4em; }
+    h1 a { text-decoration: none }
+    h2 { font-size: 1.5em; color: #e36a79; }
+    h3 { text-align: center; color: #e36a79; }
+    a { color: #3f3f3f; text-decoration: none; }
+    .description { font-size: 14px; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
+    .download { float: right; }
+    pre { background: #000; color: #fff; padding: 15px; overflow: auto;}
+    hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+    .footer { text-align:center; padding-top:30px; font-style: italic; margin-bottom: 20px; }
+ 
+    .container {
+	    background-color: #464646;
+	    float:center;
+	    /*height: 450px;*/
+	    width:750px;
+	    text-align: center;
+	    background: #b4b4b4; 
+	    -moz-border-radius-bottomright: 50px;
+	    border-top-right-radius: 15px;
+	    border-top-left-radius: 15px;
+	    border-bottom-left-radius: 15px;
+	    border-bottom-right-radius: 15px;
+	    filter:alpha(opacity=95); 
+	    -moz-opacity: 0.95; 
+	    opacity: 0.95; 
+        text-align: left;
+        margin: 5px auto;
+        width: 900px;
+    }
+ 
+    #noopacity {
+        filter:alpha(opacity=100); 
+	    -moz-opacity: 1; 
+	    opacity: 1;     
+    }
+ 
+    .non_transparent_objects {
+        filter:alpha(opacity=100); 
+	    -moz-opacity: 1; 
+	    opacity: 1;  
+    }
+  </style> 
+</head> 
+ 
+<body> 
+  <a href="http://github.com/webnull/libpybootutils"><img style="position: absolute; top: 0; right: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a> 
+    <div class="container"> 
+        <div class="text"> 
+            <div class="download"> 
+              <a href="http://github.com/webnull/libpybootutils/zipball/master"> 
+                <img border="0" width="90" src="http://github.com/images/modules/download/zip.png"></a> 
+              <a href="http://github.com/webnull/libpybootutils/tarball/master"> 
+                <img border="0" width="90" src="http://github.com/images/modules/download/tar.png"></a> 
+            </div> 
+ 
+            <span style="font-size: 30px;">libpybootutils</span> 
+ 
+            <div class="description"> 
+              Bootloader configs parsing libraries for Python. You don't need to waste your time to create GRUB 0.97 config parser because it's already done.
+            </div> 
+ 
+            <p><b>License:</b> This software is distributed on Open and Free Software terms - <a href="http://www.gnu.org/licenses/gpl-3.0.html">GPLv3</a> 
+            <br/><b>Requirements:</b> Python 2.x
+            <br/><b>Source code:</b> <a href="https://github.com/webnull/libpybootutils" style="text-decoration: none;">libpybootutils</a> 
+            <br/><b>Required by:</b> <a href="https://github.com/webnull/xsm-py" style="text-decoration: none;">xsm-py</a> 
+            </p> 
+ 
+ 
+            <p>To download project files you need a <a href="http://git-scm.com" style="text-decoration: none;">Git</a>, then you can execute:
+                <pre>$ git clone git://github.com/webnull/libpybootutils</pre> 
+ 
+                     To install you just need to run:
+                <pre>$ ./setup.py build
+sudo ./setup.py install</pre>
+            </p> 
+
+            <p>Importing bootloader parser to your application:
+                <pre>>>> import libpybootutils.grub as grub
+>>> print grub
+&lt;module 'libpybootutils.grub' from '/usr/lib/python2.7/site-packages/libpybootutils/grub.pyc'&gt;</pre>
+            </p>
+
+            <p>Parsing GRUB 2
+                <pre>>>> bootParser = grub.BootLoaderParser()
+>>> bootParser.loadFile("/boot/grub/grub.cfg")
+>>> listOfSystems = bootParser.loadFile("/boot/grub/grub.cfg")
+>>> print listOfSystems
+[{'kernel_type': 'Linux', 'kernel': '/boot/linux-3.0', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 3.0', 'chainloader': False, 'partition': '/dev/sda2', 'id': 1}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-2.6.38r4', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 2.6.38-r4', 'chainloader': False, 'partition': '/dev/sda2', 'id': 2}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-2.6.38', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 2.6.38', 'chainloader': False, 'partition': '/dev/sda2', 'id': 3}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-2.6.37', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 2.6.37', 'chainloader': False, 'partition': '/dev/sda2', 'id': 4}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-3.0', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 3.0', 'chainloader': False, 'partition': '/dev/sda2', 'id': 1}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-2.6.38r4', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 2.6.38-r4', 'chainloader': False, 'partition': '/dev/sda2', 'id': 2}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-2.6.38', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 2.6.38', 'chainloader': False, 'partition': '/dev/sda2', 'id': 3}, {'kernel_type': 'Linux', 'kernel': '/boot/linux-2.6.37', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 2.6.37', 'chainloader': False, 'partition': '/dev/sda2', 'id': 4}]
+>>> print listOfSystems[0]                                                                                                                                    
+{'kernel_type': 'Linux', 'kernel': '/boot/linux-3.0', 'initrd': False, 'kernel_params': 'root=/dev/sda2 ro quiet splash', 'title': 'Gentoo Linux - kernel Linux 3.0', 'chainloader': False, 'partition': '/dev/sda2', 'id': 1}                                                                                              
+>>> print "First system is "+listOfSystems[0]['title']+", based on "+listOfSystems[0]['kernel_type']+" kernel. Its placed on "+listOfSystems[0]['partition']+" partition."
+First system is Gentoo Linux - kernel Linux 3.0, based on Linux kernel. Its placed on /dev/sda2 partition.</pre>
+</p>
+ 
+            <div class="footer"> 
+                Project page: <a href="https://github.com/webnull/libpybootutils" style="text-decoration: none;">xsm-py</a> | Author's website: <a href="http://webnull.kablownia.org" style="text-decoration: none;">webnull.kablownia.org</a> 
+            </div> 
+        </div> 
+    </div> 
+ 
+  <script type="text/javascript"> 
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script> 
+<script type="text/javascript"> 
+try {
+var pageTracker = _gat._getTracker("UA-24581272-1");
+pageTracker._trackPageview();
+} catch(err) {}</script> 
+</body> 
+</html> 
